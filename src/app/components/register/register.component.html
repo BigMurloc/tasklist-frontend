@@ -1,1 +1,15 @@
-<p>register works!</p>
+<form class="form-group" #loginForm="ngForm">
+  <div>
+    <label class="col-form-label" for="username">Username:</label>
+    <input class="input-group-text" name="username"
+           ngModel #username="ngModel"
+           placeholder="username"
+           id="username">
+    <label class="col-form-label" for="password">Password:</label>
+    <input class="input-group-text" name="password"
+           ngModel #password="ngModel"
+           placeholder="password"
+           id="password">
+  </div>
+  <button (click)="register(loginForm)">Register</button>
+</form>

@@ -1,15 +1,21 @@
-<form class="form-group" #loginForm="ngForm">
-  <div>
-    <label class="col-form-label" for="username">Username:</label>
-    <input class="input-group-text" name="username"
-           ngModel #username="ngModel"
-           placeholder="username"
-           id="username">
-    <label class="col-form-label" for="password">Password:</label>
-    <input class="input-group-text" name="password"
-           ngModel #password="ngModel"
-           placeholder="password"
-           id="password">
-  </div>
-  <button (click)="register(loginForm)">Register</button>
-</form>
+<div class="form">
+  <form class="form-register" #loginForm="ngForm">
+    <div>
+      <div class="item">
+        <input class="input-group-text" name="username"
+               ngModel #username="ngModel"
+               placeholder="username"
+               id="username">
+      </div>
+      <div class="item">
+        <input class="input-group-text" name="password"
+               ngModel #password="ngModel"
+               placeholder="password"
+               id="password">
+      </div>
+      <div class="item">
+        <button class="btn" (click)="register(loginForm)">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
